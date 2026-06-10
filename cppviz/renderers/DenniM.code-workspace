@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "DenniM",
+			"path": "../.."
+		},
+		{
+			"name": "signals",
+			"path": "../../../phase-2/DSA/signals"
+		}
+	],
+	"settings": {}
+}

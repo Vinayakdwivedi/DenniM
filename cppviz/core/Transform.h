@@ -1,4 +1,6 @@
 #pragma once
+#include <vector>
+#include <iostream>
 #include "Coordinate.h"
 #include "MathUtils.h"
 #include <cmath>
