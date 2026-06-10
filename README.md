@@ -18,7 +18,7 @@ The project is divided into two implementations:
 
 Designed for standard C++ applications and SVG generation.
 
-### Arduino Library (`cppviz-arduino`)
+### Arduino Library (`cppviz-arduino`)           (yet to be implemented)
 
 Designed for microcontrollers and TFT displays using Arduino-compatible boards such as ESP32.
 
@@ -56,6 +56,9 @@ project/
 * Circle
 * Polygon
 
+<img src="pentagon.png" width="300">
+
+
 ### Transformations
 
 * Rotation
@@ -87,22 +90,27 @@ Embedded:
 ## Example
 
 ```cpp
-#include "shapes/Signal.h"
+#include "../core/Coordinate.h"
+#include "../shapes/Shapes.h"
+#include "../shapes/Signals.h"
+#include "../renderers/SVGRenderer.h"
+
 
 using namespace cppviz;
 
 int main() {
-    Coordinate wave = Signal::sineWave(
-        1.0f,   // amplitude
-        2.0f,   // frequency
-        1.0f,   // duration
-        200     // samples
-    );
+    SignalDataResult sig = signal.SineSignal(
+                                2.0f,       // time
+                                200,        // samples
+                                3.0f        // frequency
+);
+        renderer.renderSignal(sig, "signal.svg");
+        std::cout << "[OK] signal.svg\n";
 
     return 0;
 }
 ```
-
+<img src="sinesignal.png" width="300">
 ---
 
 ## Building Desktop Version
