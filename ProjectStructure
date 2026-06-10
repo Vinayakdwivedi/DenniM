@@ -1,0 +1,29 @@
+project/
+│
+├── cppviz/                        ← pure C++ desktop library
+│   ├── core/
+│   │   ├── Coordinate.h
+│   │   ├── Transform.h
+│   │   └── MathUtils.h
+│   ├── shapes/
+│   │   ├── Shapes.h
+│   │   └── Signal.h
+│   ├── renderers/
+│   │   └── SVGRenderer.h          ← writes .svg files, desktop only
+│   └── examples/
+│       └── desktop_sine.cpp
+│
+└── cppviz-arduino/                ← Arduino IDE compatible library
+    ├── src/
+    │   ├── core/
+    │   │   ├── Coordinate.h       ← same struct, but fixed arrays
+    │   │   ├── Transform.h        ← same logic, copied over
+    │   │   └── MathUtils.h
+    │   ├── shapes/
+    │   │   ├── Shapes.h
+    │   │   └── Signal.h
+    │   └── renderers/
+    │       └── TFTRenderer.h      ← wraps TFT_eSPI, arduino only
+    ├── examples/
+    │   └── esp32_sensor_graph.ino
+    └── library.properties 
