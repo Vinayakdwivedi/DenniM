@@ -11,6 +11,7 @@ struct Coordinate {
     std::vector<float> x_value;
     std::vector<float> y_value;
 
+
     /// Returns the number of points stored.
     std::size_t size() const { return x_value.size(); }
 
