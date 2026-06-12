@@ -77,6 +77,47 @@ public:
         return points;
     }
 
+    // ── Circle ───────────────────────────────────────────────────────────────
+
+    /**
+     * Generates a circle as a polyline.
+     *
+     * @param radius     Radius of the circle.
+     * @param center_x   X coordinate of center.
+     * @param center_y   Y coordinate of center.
+     * @param segments   Number of points used to approximate the circle.
+     *                   Higher value = smoother circle.
+     * @return           Closed polyline.
+     */
+    Coordinate Circle(int radius,
+                      int center_x = 400,
+                      int center_y = 200,
+                      int segments = 100) const
+    {   
+        Coordinate points;
+
+        points.x_value.reserve(segments + 1);
+        points.y_value.reserve(segments + 1);
+
+        for (int i = 0; i <= segments; ++i)
+        {
+            double angle = (2.0 * PI * i) / segments;
+
+            float x = static_cast<float>(
+                center_x + radius * std::cos(angle));
+
+            float y = static_cast<float>(
+                center_y + radius * std::sin(angle));
+
+            points.x_value.push_back(x);
+            points.y_value.push_back(y);
+        }
+
+        return points;
+    }
+
+
+
     // ── Square ───────────────────────────────────────────────────────────────
 
     /**
