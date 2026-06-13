@@ -1,10 +1,10 @@
-# DenniM
+<img src="dennim-github-readme-1.png" width="2000">
 
 A lightweight C++ visualization library for generating geometric shapes, transformations, signal waveforms, and graphical outputs across desktop and embedded platforms.
 
 ## Overview
 
-cppviz provides a common API for:
+DenniM:: provides a common API for:
 
 * Creating geometric shapes
 * Generating mathematical and signal waveforms
